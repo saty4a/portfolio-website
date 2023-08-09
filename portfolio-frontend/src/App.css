@@ -21,6 +21,10 @@ section {
   margin-right: 0rem;
 }
 
+.background-navBar {
+  background-color: #112240;
+}
+
 .blur-navbar-background {
   backdrop-filter: blur(5px);
 }

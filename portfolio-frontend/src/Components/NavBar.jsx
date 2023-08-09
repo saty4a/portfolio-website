@@ -13,7 +13,7 @@ const NavBar = ({setShowNavBar}) => {
     }
     return(
         <div className="h-[100vh] w-full top-0 fixed right-0 text-white z-20 blur-background" onClick={handleClick}>
-            <NavElements refs={ref} closeNavBar={closeNavBar} h={"50vh"} direction={"flex-col"} bgColor={"#112240"} />
+            <NavElements refs={ref} closeNavBar={closeNavBar} h={"50vh"} direction={"flex-col"} />
         </div>
     )
 }

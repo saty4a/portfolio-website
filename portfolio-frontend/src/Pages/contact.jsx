@@ -35,7 +35,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col w-full m-auto lg:w-1/2 2xl:w-1/3"
+      className="reveal flex flex-col w-full m-auto lg:w-1/2 2xl:w-1/3"
     >
       <label htmlFor="name" className="text-lg">
         Name
@@ -74,7 +74,7 @@ const Contact = () => {
       ></textarea>
       <button
         type="submit"
-        className="mt-6 border-2 w-1/3 m-auto sm:w-1/5"
+        className="mt-6 border-2 w-1/3 m-auto hover:-translate-y-1 hover:scale-110 sm:w-1/5"
         onClick={handleSubmit}
       >
         submit

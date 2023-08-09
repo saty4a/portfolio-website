@@ -16,25 +16,13 @@ body::-webkit-scrollbar {
   padding: 1.25rem;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
 section {
   margin-left: 0rem;
   margin-right: 0rem;
+}
+
+.blur-navbar-background {
+  backdrop-filter: blur(5px);
 }
 
 .blur-background {
@@ -42,9 +30,62 @@ section {
   backdrop-filter: blur(2px);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.button-transform {
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);;
+}
+
+.button-transform {
+  outline: none;
+  box-shadow: 4px 4px 0 0 #64ffda;
+  transform: translate(-5px, -5px);
+}
+
+.fade-in-done {
+  animation: fade-in 1s ease-in;
+}
+
+.text-underline-animation {
+  position: relative;
+  text-decoration: none;
+}
+
+.text-underline-animation::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.text-underline-animation:hover::before {
+  transform: scaleX(1);
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 768px) {

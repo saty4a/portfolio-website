@@ -8,8 +8,10 @@ import NavElements from "./NavElements";
 library.add(faBars, faXmark);
 
 const Header = () => {
+  const styles = "sticky top-0 z-50 blur-navbar-background";
   const [showNavBar, setShowNavBar] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [styleNavBar, setStyleNavBar] = useState(window.innerWidth <= 1024 ? "" : styles)
   const ref = useRef();
   const handleNavBar = () => {
     setShowNavBar(!showNavBar);
@@ -29,6 +31,13 @@ const Header = () => {
       if (window.innerWidth >= 1024) {
         setShowNavBar(false);
       }
+      if (window.innerWidth <= 1024) {
+        setStyleNavBar("");
+      }
+      else {
+        setStyleNavBar(styles);
+      }
+
     };
     window.addEventListener("resize", handleWindowResize);
     return () => {
@@ -37,8 +46,8 @@ const Header = () => {
   }, []);
 
   return (
-    <nav className="">
-      <div className="flex justify-between mx-0 2xl:mx-[5rem]">
+    <nav className={`navBar ${styleNavBar}`}>
+      <div className="flex justify-between items-center mx-0 2xl:mx-[5rem]">
         <h2 className="text-2xl"><a href="#">Portfolio</a></h2>
         {windowWidth >= 1024 ? (
           <NavElements refs={ref} h={"full"} directions={"flex-row"} />

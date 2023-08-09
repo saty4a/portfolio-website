@@ -8,9 +8,11 @@ import Experience from './Pages/Experience';
 import Project from './Pages/Project';
 import Contact from './Pages/contact';
 import Footer from './Pages/Footer';
+import { reveal } from './HelperFunction/ScrollAnimation';
 
 class App extends Component {
   render() {
+    window.addEventListener("scroll",reveal);
     return (
       <div className='App z-10 flex flex-col gap-5'>
       <Header />

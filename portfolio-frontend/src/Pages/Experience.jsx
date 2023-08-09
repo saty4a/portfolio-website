@@ -2,7 +2,7 @@ import React from "react";
 
 const Experience = () => {
   return (
-    <section id="experience" className="2xl:mx-[15rem]">
+    <section id="experience" className="reveal 2xl:mx-[15rem]">
       <h2 className="text-3xl py-3 text-start md:text-center">Experience</h2>
       <h2 className="text-lg font-bold">Software Developer Intern</h2>
       <p className="text-lg mt-3">Itobuz Technologies, Kolkata</p>

@@ -1,7 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import {FaGithub, FaLinkedinIn, FaMedium} from "react-icons/fa";
+import { AiFillMail } from "react-icons/ai";
 
 const Footer = () => {
     return (
@@ -10,6 +9,7 @@ const Footer = () => {
             <a href="https://github.com/saty4a"><FaGithub /></a>
             <a href="#"><FaLinkedinIn /></a>
             <a href="#"><FaMedium /></a>
+            <a href="#"><AiFillMail /></a>
             </div>
             <p className="mt-4">Made by Satyabrata Biswal</p>
         </div>

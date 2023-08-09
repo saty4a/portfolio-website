@@ -35,7 +35,7 @@ const Project = () => {
   ];
   return (
     <section id="project">
-      <h2 className="text-3xl py-3 text-start md:text-center">
+      <h2 className="reveal text-3xl py-3 text-start md:text-center">
         Some Things I've Built
       </h2>
       {projects &&

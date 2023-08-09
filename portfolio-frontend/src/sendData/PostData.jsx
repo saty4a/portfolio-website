@@ -3,7 +3,7 @@ import axios from "axios";
 export const sendData = async (senderData) => {
   try {
     const response = await axios
-      .post("http://localhost:4000/send", senderData)
+      .post("https://portfolio-backend-v1.vercel.app/send", senderData)
       .then((data) => {
         return data;
       });

@@ -25,13 +25,8 @@ section {
   background-color: #112240;
 }
 
-.blur-navbar-background {
-  backdrop-filter: blur(5px);
-}
-
 .blur-background {
-  background-color: rgba(145, 138, 135, 0.5);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(10px);
 }
 
 .button-transform {
@@ -80,6 +75,31 @@ section {
 .reveal.active{
   transform: translateY(0);
   opacity: 1;
+}
+
+.slide-in-done {
+  animation: slide-in 600ms ease-in;
+}
+
+.slide-out-done {
+  animation: slide-out 600ms ease-out;
+}
+
+@keyframes slide-in {
+  0%{
+    opacity: 0;
+    transform: translatex(26rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  100%{
+    opacity: 0;
+    transform: translateX(26rem);
+  }
 }
 
 @keyframes fade-in {

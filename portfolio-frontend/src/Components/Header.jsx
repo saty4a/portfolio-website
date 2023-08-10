@@ -5,15 +5,26 @@ import { FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 
 const Header = () => {
-  const styles = "sticky top-0 z-50 blur-navbar-background";
+  const styles = "sticky top-0 z-50 blur-background";
   const [showNavBar, setShowNavBar] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [styleNavBar, setStyleNavBar] = useState(
     window.innerWidth <= 1024 ? "" : styles
   );
+  const [navAnimation, setNavAnimation] = useState("slide-in-done")
+
   const ref = useRef();
   const handleNavBar = () => {
-    setShowNavBar(!showNavBar);
+    if (showNavBar) {
+      setNavAnimation("slide-out-done")
+      setTimeout(() => {
+        setShowNavBar(!showNavBar);
+        setNavAnimation("slide-in-done")
+      },600)
+    }
+    else{
+      setShowNavBar(!showNavBar);
+    }
   };
 
   useEffect(() => {
@@ -51,11 +62,7 @@ const Header = () => {
         {windowWidth >= 1024 ? (
           <NavElements refs={ref} h={"full"} directions={"flex-row"} />
         ) : !showNavBar ? (
-          <FaBars
-            className="cursor-pointer"
-            size={35}
-            onClick={handleNavBar}
-          />
+          <FaBars className="cursor-pointer" size={35} onClick={handleNavBar} />
         ) : (
           <FaXmark
             className="z-50 cursor-pointer"
@@ -64,7 +71,11 @@ const Header = () => {
           />
         )}
       </div>
-      {showNavBar ? <NavBar setShowNavBar={setShowNavBar} /> : ""}
+      {showNavBar ? (
+        <NavBar setShowNavBar={setShowNavBar} navAnimation={navAnimation} setNavAnimation={setNavAnimation}  />
+      ) : (
+        ""
+      )}
     </nav>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import NavElements from "./NavElements";
-// import { removeNavBarAnimation } from "../HelperFunction/NavBarAnimation";
 
 const NavBar = ({setShowNavBar, navAnimation, setNavAnimation}) => {
   const ref = useRef();

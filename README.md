@@ -1,6 +1,6 @@
 # portfolio-website
 
-  you can view it in:
+  you can view it in: https://portfolio-websitev1.vercel.app/
 
   ### To run -
     1. Frontend: open the frontend part and type 'npm start' in terminal.

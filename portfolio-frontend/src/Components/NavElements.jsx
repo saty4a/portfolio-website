@@ -15,7 +15,7 @@ const NavElements = (props) => {
                 <li className="text-underline-animation " onClick={props.closeNavBar}><a href="#experience">Experince</a></li>
                 <li className="text-underline-animation " onClick={props.closeNavBar}><a href="#project">Project</a></li>
                 <li className="text-underline-animation " onClick={props.closeNavBar}><a href="#contact">Contact</a></li>
-                <li className="hover:-translate-y-1 hover:scale-110" onClick={props.closeNavBar}><a href="https://drive.google.com/file/d/1IjrM1tlwSUaNT9Kl9eLsNW25x12bmaoF/view?usp=sharing" target="_blank" className="border-2 p-2">Resume</a></li>
+                <li className="hover:-translate-y-1 hover:scale-110" onClick={props.closeNavBar}><a href="https://drive.google.com/file/d/1EGeAhgySH3tIZEidiS_9ZypToysBcHG7/view?usp=sharing" target="_blank" className="border-2 p-2">Resume</a></li>
         </ul>
     )
 }
